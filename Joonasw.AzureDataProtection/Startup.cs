@@ -57,10 +57,13 @@ namespace Joonasw.AzureDataProtection
 
         private TokenCredential GetTokenCredential(AppOptions options)
         {
-            return new DefaultAzureCredential(new DefaultAzureCredentialOptions
+            var credentialOptions = new DefaultAzureCredentialOptions();
+            if (options.SharedTokenCacheTenantId != null)
             {
-                SharedTokenCacheTenantId = options.SharedTokenCacheTenantId
-            });
+                credentialOptions.SharedTokenCacheTenantId = options.SharedTokenCacheTenantId;
+            }
+
+            return new DefaultAzureCredential(credentialOptions);
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
