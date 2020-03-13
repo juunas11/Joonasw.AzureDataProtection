@@ -5,11 +5,17 @@
 }
 
 <div>
-    <h1 class="display-4">Claims</h1>
-    <ul>
-        @foreach (var claim in User.Claims)
-        {
-            <li>@claim.Type: @claim.Value</li>
-        }
-    </ul>
+    <h1 class="display-4">Data protection test</h1>
+    @if (Model.ReadValue != null)
+    {
+        <p>Read value from cookie: <strong>@Model.ReadValue</strong></p>
+        <p>This same value should show up if you refresh the page.</p>
+        <p>It should also show up even if you restart the app process since the keys are persisted in Azure Storage.</p>
+    }
+    else if (Model.WrittenValue != null)
+    {
+        <p>Wrote value to cookie: <strong>@Model.WrittenValue</strong></p>
+        <p>This same value should show up if you refresh the page.</p>
+        <p>It should also show up even if you restart the app process since the keys are persisted in Azure Storage.</p>
+    }
 </div>

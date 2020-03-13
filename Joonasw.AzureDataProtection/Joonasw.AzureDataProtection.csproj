@@ -3,12 +3,10 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <UserSecretsId>aspnet-Joonasw.AzureDataProtection-1182B9CA-56DC-40AC-88A8-66018C5F77E2</UserSecretsId>
-    <WebProject_DirectoryAccessLevelKey>0</WebProject_DirectoryAccessLevelKey>
   </PropertyGroup>
 
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Authentication.AzureAD.UI" Version="3.1.1" />
     <PackageReference Include="Azure.AspNetCore.DataProtection.Keys" Version="1.0.0-preview.1" />
     <PackageReference Include="Azure.AspNetCore.DataProtection.Blobs" Version="1.0.0-preview.1" />
     <PackageReference Include="Azure.Identity" Version="1.2.0-preview.1" />
