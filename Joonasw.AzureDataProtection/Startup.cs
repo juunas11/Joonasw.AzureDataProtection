@@ -32,6 +32,14 @@ namespace Joonasw.AzureDataProtection
                     keyIdentifier,
                     GetTokenCredential(options))
                 .PersistKeysToAzureBlobStorage(GetBlobClient(options));
+            // Key Vault requires the user/app to have following permissions on Keys:
+            // -Read
+            // -Wrap key
+            // -Unwrap key
+
+            // Blob Storage requires the user/app to have
+            // Storage Blob Data Contributor role
+            // at Storage account or container level
         }
 
         private BlobClient GetBlobClient(AppOptions options)
