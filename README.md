@@ -62,10 +62,9 @@ Next you need add configuration to _appsettings.json:
 You can also setup these settings as user secrets,
 as I have done for running locally.
 
-Now you will need to ensure your user account gets used.
-If you are using Visual Studio,
-choose your user account in Tools -> Options -> Azure Service Authentication.
-If using another IDE, download the [cross-platform AZ CLI](https://docs.microsoft.com/en-us/cli/azure/?view=azure-cli-latest) and login there.
+If you get errors about no user account being found in shared cache,
+you can login to the account in Visual Studio,
+or download the [cross-platform AZ CLI](https://docs.microsoft.com/en-us/cli/azure/?view=azure-cli-latest) and login there.
 
 ## Azure setup
 
