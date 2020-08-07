@@ -2,8 +2,8 @@
 
 This app uses the new Azure integration packages for data protection with Azure Key Vault and Azure Storage:
 
-- [Azure.AspNetCore.DataProtection.Keys](https://www.nuget.org/packages/Azure.AspNetCore.DataProtection.Keys)
-- [Azure.AspNetCore.DataProtection.Blobs](https://www.nuget.org/packages/Azure.AspNetCore.DataProtection.Blobs)
+- [Azure.Extensions.AspNetCore.DataProtection.Keys](https://www.nuget.org/packages/Azure.Extensions.AspNetCore.DataProtection.Keys)
+- [Azure.Extensions.AspNetCore.DataProtection.Blobs](https://www.nuget.org/packages/Azure.Extensions.AspNetCore.DataProtection.Blobs)
 
 It also uses the [Azure.Identity](https://www.nuget.org/packages/Azure.Identity) package to connect to both Azure Key Vault and Blob Storage with the developer user account / Managed Identity in Azure.
 

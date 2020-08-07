@@ -29,7 +29,7 @@ namespace Joonasw.AzureDataProtection
             var keyIdentifier = options.KeyVaultKeyId;
             services.AddDataProtection()
                 .ProtectKeysWithAzureKeyVault(
-                    keyIdentifier,
+                    new Uri(keyIdentifier),
                     GetTokenCredential(options))
                 .PersistKeysToAzureBlobStorage(GetBlobClient(options));
             // Key Vault requires the user/app to have following permissions on Keys:
