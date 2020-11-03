@@ -61,6 +61,8 @@ namespace Joonasw.AzureDataProtection
             if (options.SharedTokenCacheTenantId != null)
             {
                 credentialOptions.SharedTokenCacheTenantId = options.SharedTokenCacheTenantId;
+                credentialOptions.VisualStudioCodeTenantId = options.SharedTokenCacheTenantId;
+                credentialOptions.VisualStudioTenantId = options.SharedTokenCacheTenantId;
             }
 
             return new DefaultAzureCredential(credentialOptions);
